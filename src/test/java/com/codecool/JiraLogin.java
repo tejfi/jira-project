@@ -17,17 +17,13 @@ public class JiraLogin {
     public void login() throws InterruptedException {
         driver.get("https://jira.codecool.codecanvas.hu/login.jsp");
         driver.findElement(By.id("login-form-username")).sendKeys(username);
-        Thread.sleep(500);
         driver.findElement(By.id("login-form-password")).sendKeys(password);
-        Thread.sleep(500);
         driver.findElement(By.id("login-form-submit")).click();
     }
 
     public void logout() throws InterruptedException {
         driver.findElement(By.id("header-details-user-fullname")).click();
-        Thread.sleep(500);
         driver.findElement(By.id("log_out")).click();
-        Thread.sleep(500);
     }
 
     public void setUser(String user) {
